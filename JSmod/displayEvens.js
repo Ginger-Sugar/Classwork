@@ -7,7 +7,6 @@ var userinput3;
 
 function displayEvens() {
 
-  //  console.log("aloha punk");
 
   userinput1 = Number(document.getElementById("First Number: Lower").value);
   userinput2 = Number(document.getElementById("Second Number: Higher").value);
