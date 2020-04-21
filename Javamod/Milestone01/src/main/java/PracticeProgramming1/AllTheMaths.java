@@ -9,7 +9,7 @@ package PracticeProgramming1;
  *
  * @author Shantoria Taylor
  */
-public class AllTHeMaths {
+public class AllTheMaths {
     public static void main (String[] args) {
         
         System.out.print("1+2 is: " );
