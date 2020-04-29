@@ -47,30 +47,7 @@ public class FieldDay {
     }
         
         System.out.println("Good luck in the games and let the odds be ever in your favor");
-    }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    
         
     }
     
