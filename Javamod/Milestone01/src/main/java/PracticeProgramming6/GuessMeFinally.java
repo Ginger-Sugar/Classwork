@@ -3,19 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PracticeProgramming5;
+package PracticeProgramming6;
 
 import java.util.Random;
 import java.util.Scanner;
 
 /**
  *
- * @author Shantoria Taylor
+ * @author shana
  */
-public class GuessMeMore {
-    public static void main(String[] args) {
+public class GuessMeFinally {
         
-        Random randomizer = new Random();
+     public static void main(String[] args) {
+         
+         Random randomizer = new Random();
         Scanner myScanner = new Scanner(System.in);
         
         int myChoice, userChoice, guessNum = 0;
@@ -52,5 +53,17 @@ public class GuessMeMore {
         
            }
           }
-    
-
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+    }
