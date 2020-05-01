@@ -14,7 +14,7 @@ public class StillPositive {
         
         int[] numbers = { 389, -447, 26, -485, 712, -884, 94, -64, 868, -776, 227, -744, 422, -109, 259, -500, 278, -219, 799, -311};
         
-        System.out.println("You gotta be positive!! ");
+        System.out.println("You gotta be positive to be in this group!! ");
         
         for (int i = 0; i < numbers.length; i++){
             
