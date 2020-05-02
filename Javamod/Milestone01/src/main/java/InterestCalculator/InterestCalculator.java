@@ -42,7 +42,6 @@ public class InterestCalculator {
         nf.setMinimumFractionDigits(2);// minimum of decimal digits (currency, always 2)
         
         
-        
         compoundInterest = principal * Math.pow((1 + aR/100), tP);
         interestEarned = (compoundInterest - principal);
         
@@ -53,8 +52,8 @@ public class InterestCalculator {
         System.out.println();
         System.out.println("The number of years: "+tP);
         System.out.println();
-        System.out.println("The perspective interest rate: ");
-  
+        System.out.println("The perspective interest rate: "+aR+"%");
+        System.out.println();
         System.out.println("Your total amount after "+tP+" years is $ "+cI+" ." );
         System.out.println("Or $"+iE+ " in interest earned.");
         
