@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PracticeProgramming3;
+package Assessment;
 
 import java.util.Scanner;
 
@@ -12,8 +12,7 @@ import java.util.Scanner;
  * @author shana
  */
 public class HealthyHearts {
-    
-    public static void main(String[] args) {
+      public static void main(String[] args) {
         
         Scanner myScanner = new Scanner(System.in);
         
@@ -35,7 +34,7 @@ public class HealthyHearts {
         System.out.println("Your target heart rate during exercise should be "+targetMin+" , the maximum "+targetMax+" .");
         
         
-        
     }
+    
     
 }
