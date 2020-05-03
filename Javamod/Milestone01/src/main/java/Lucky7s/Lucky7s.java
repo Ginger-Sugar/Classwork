@@ -69,10 +69,6 @@ public class Lucky7s {
         int totalRoll = dice1 + dice2;
 
         return totalRoll;
-    }//end of 
-    
-    
-    public void testmethod(){
-        
-    }//end of test method
+    }//end of  class
+   
 }
