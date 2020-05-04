@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author shana
+ * @author Shantoria Taylor
  */
 public class HealthyHearts {
       public static void main(String[] args) {

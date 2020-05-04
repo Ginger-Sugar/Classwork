@@ -83,8 +83,8 @@ public class RockPaperScissors {
 
         int computerA;
 
-        computerA = rando.nextInt(3 - 1) + 1;
-
+        computerA = rando.nextInt(4 - 1) + 1;
+        
         if (computerA == userAnswer) {
             return "It'a a tie!";
         } else if (userAnswer == 1 && computerA == 3) {
