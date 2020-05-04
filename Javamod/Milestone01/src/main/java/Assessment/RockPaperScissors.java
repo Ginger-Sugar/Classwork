@@ -71,7 +71,6 @@ public class RockPaperScissors {
 
     }
 
-
     /**
      *
      * @param userAnswer
@@ -84,7 +83,7 @@ public class RockPaperScissors {
         int computerA;
 
         computerA = rando.nextInt(4 - 1) + 1;
-        
+        System.out.println(computerA);
         if (computerA == userAnswer) {
             return "It'a a tie!";
         } else if (userAnswer == 1 && computerA == 3) {
