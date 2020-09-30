@@ -5,9 +5,6 @@
  */
 package VendingMachine.service;
 
-import VendingMachine.Dao.VMAuditDao;
-import VendingMachine.Dao.VMDao;
-import VendingMachine.Dao.VMDaoStubImpl;
 import VendingMachine.Dto.Drinks;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
@@ -15,6 +12,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  *
@@ -26,9 +25,13 @@ public class VMServiceLayerImplTest {
 
     public VMServiceLayerImplTest() {
 
-        VMDao dao = new VMDaoStubImpl();
-        VMAuditDao auditDao = new VMAuditDaoStubImpl();
-        service = new VMServiceLayerImpl(dao, auditDao);
+        //VMDao dao = new VMDaoStubImpl();
+        //   VMAuditDao auditDao = new VMAuditDaoStubImpl();
+        //   service = new VMServiceLayerImpl(dao, auditDao);
+        ApplicationContext ctx
+                = new ClassPathXmlApplicationContext("applicationContext.xml");
+        service = ctx.getBean("serviceLayer", VMServiceLayer.class);
+
     }
 
     @BeforeAll
@@ -82,7 +85,7 @@ public class VMServiceLayerImplTest {
     @Test
     public void getPaymentNotEnough() throws Exception {
 
-        Drinks onlyDrink= new Drinks("Water", .60, 40);
+        Drinks onlyDrink = new Drinks("Water", .60, 40);
 
         try {
             service.buyDrinks(onlyDrink.getName(), .30);
@@ -93,18 +96,17 @@ public class VMServiceLayerImplTest {
         } catch (InsufficientFundsException e) {
         }
     }
-    
+
     @Test
-    public void getNameWrongName () throws Exception {
+    public void getNameWrongName() throws Exception {
         Drinks onlyDrink1 = new Drinks("Iced Coffee", .90, 2);
-        
+
         try {
-             service.buyDrinks("Sprite", .90);
-            fail( "Sprite is not a drink we sell. Expecting InvalidSelectionException.");
+            service.buyDrinks("Sprite", .90);
+            fail("Sprite is not a drink we sell. Expecting InvalidSelectionException.");
         } catch (InsufficientFundsException | InsufficientProductException e) {
-            fail ("Incorrect exception");
-        }
-        catch(InvalidSelectionException e){
+            fail("Incorrect exception");
+        } catch (InvalidSelectionException e) {
         }
 
     }

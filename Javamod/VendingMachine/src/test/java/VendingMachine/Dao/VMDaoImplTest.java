@@ -59,6 +59,8 @@ public class VMDaoImplTest {
         
         Drinks drink1 = new Drinks(name, price, quantity);
         Drinks drink2 = new Drinks("Juice", 0.99,5);
+        
+        
         //Act
         Drinks test1 = testDao.addItem(drink1);
         Drinks test2 = testDao.addItem( drink2);

@@ -1,5 +1,9 @@
 package VendingMachine.Dao;
 
+import VendingMachine.Dao.VMDao;
+import VendingMachine.Dao.VMDao;
+import VendingMachine.Dao.VMPersistenceException;
+import VendingMachine.Dao.VMPersistenceException;
 import VendingMachine.Dto.Drinks;
 import java.util.ArrayList;
 import java.util.List;
