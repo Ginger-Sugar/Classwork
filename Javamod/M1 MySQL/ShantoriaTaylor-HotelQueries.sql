@@ -49,11 +49,11 @@ select c.firstname,c.lastname,ro.roomID,r.checkin,r.adults + r.children as every
 from customer c
 inner join reservation r on c.customerId = r.customerId
 inner join room ro on r.roomID = ro.roomID
-WHERE c.customerId = 1;
+WHERE c.firstName = 'shantoria';
 
 -- answer:
--- Shantoria	Taylor	307	2023-03-17	2
--- Shantoria	Taylor	205	2023-06-28	2
+-- Shantoria	Taylor	307	2023-03-17	2  524.97
+-- Shantoria	Taylor	205	2023-06-28	2  699.96
 
 -- question 4: Write a query that returns a list of rooms, reservation ID, and per-room cost for each reservation. The results should include all rooms,
 -- whether or not there is a reservation associated with the room.
@@ -99,7 +99,7 @@ LEFT OUTER JOIN Reservation r ON ro.RoomID = r.RoomID;
 SELECT r.RoomID,
 	   r.Adults + r.Children AS 'TotalPeople'
 FROM Reservation r
-WHERE r.Adults + r.Children > 2 
+WHERE r.Adults + r.Children >= 3 
 AND r.Checkin BETWEEN 2023/04/01 AND 2023/04/31;
 
 -- answer: n/a
@@ -112,7 +112,7 @@ SELECT CONCAT(c.FirstName, " ", c.LastName) AS 'Name',
 FROM  Reservation r
 INNER JOIN Customer c ON c.CustomerId = r.CustomerId
 GROUP BY r.CustomerId
-ORDER BY COUNT(*) DESC , c.LastName ASC;
+ORDER BY COUNT(r.reservationId) DESC , c.lastName;
 
 -- answers
 

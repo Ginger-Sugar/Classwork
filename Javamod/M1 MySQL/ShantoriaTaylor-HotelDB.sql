@@ -6,9 +6,16 @@ create database hotelreservation;
 
 use hotelreservation;
 
+
 create table Room (
-RoomID int primary key not null,
-RoomType varchar (10) not null ,
+	RoomID INT primary key,
+	RoomTypeID INT,
+	ADA_Access boolean
+);
+
+create table RoomType (
+RoomTypeID int primary key,
+TypeofRoom varchar (10),
 StandardOccupancy int not null,
 MaxOccupancy int not null,
 Base decimal (5,2) not null,
@@ -56,17 +63,5 @@ Foreign Key fk_Reservation_Customer(CustomerID)
 RoomID int not null,
 Foreign Key fk_Reservation_Room(RoomID)
 	references Room(RoomID)
-);
-
-
-create table RoomReservation(
-	RoomID INT,
-    ReservationId INT,
-    primary key pk_RoomReservation (RoomID, ReservationId),
-    foreign key fk_RoomReservation_Room (RoomID)
-		references Room (RoomID),
-	foreign key fk_RoomReservation_Reservation (ReservationId)
-		references Reservation (ReservationId),
-	ADA_Access boolean
 );
 
